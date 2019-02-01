@@ -4,6 +4,8 @@
 
 body{
 	margin:0;
+	padding: 0;
+    width: 100%;
 }
 
 /************************************/
@@ -178,7 +180,8 @@ body{
 .recipe {
 	max-width: 90%;
 	min-width: 500px;
-	height: 1500px;
+	min-height: 1500px;
+	max-height: 5000px;
 	margin: auto;
 	text-align: center;
 	background: rgba(110,30,41,0.5);
@@ -189,6 +192,7 @@ body{
 }
 
 .recipe img{
+	max-width: 80%;
 	max-height: 45%;
 	margin-left: auto;
 	margin-right: auto;
@@ -247,6 +251,54 @@ body{
 	background-color: rgba(110,30,41,0.7);
 	border: 2px solid white;
 }
+
+/********************************/
+
+/* Nutrition facts */
+.nutritionTable{
+	max-width: 90%;
+	height: 500px;
+	margin: auto;
+	text-align: center;
+	/*background: rgba(110,30,41,0.5);*/
+	border: 2px solid white;
+	color: #f1f1f1;
+	position: relative;
+	border-radius:5px;
+}
+
+.tablefacts{
+	position: relative;
+	text-align: center;
+	display: flex;
+	justify-content: center;	
+}
+
+.extrabox{
+	background: rgba(110,30,41,0);
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+table{
+	background-color: white;
+	align-self: center;
+}
+
+th {
+	background-color:rgba(110,30,41,1);
+	padding: 5px 15px;
+}
+
+td{
+	background-color:rgba(110,30,41,0.5);
+	padding: 5px 15px;
+}
+
+
+
 
 /***********************************/
 /* Footer  */
