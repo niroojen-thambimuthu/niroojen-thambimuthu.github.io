@@ -37,12 +37,12 @@ body{
 	background-color: #6e1e29;
 	border: 2px solid white;
 	position:relative;
-	float:right;  
+	float:right;
+	border-radius:5px;
 }
 
 #logo{
-	max-width: 65%;
-	max-height:65%;
+	max-height:70px;
 	left:10;
 	bottom:0;
 	position: absolute;
@@ -101,9 +101,10 @@ body{
 	margin: auto;
 	text-align:center;
 	padding: 10px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(110,30,41,0.5);
 	border: 2px solid white;
-	color: #f1f1f1;	
+	color: #f1f1f1;
+	border-radius:5px;
 }
 
 
@@ -116,10 +117,11 @@ body{
 	margin: auto;
 	text-align:center;
 	padding: 10px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(110,30,41,0.5);
 	border: 2px solid white;
 	color: #f1f1f1;
 	display: flex;
+	border-radius:5px;
 }
 
 .buttonsLink img{
@@ -135,10 +137,14 @@ body{
 
 .mealPic:hover .image {
 	opacity: 1;
+	border: 2px solid white;
+	border-radius:5px;
 }
 
 .mealPic:hover .meal {
 	opacity: 1;
+	border: 2px solid white;
+	border-radius:5px;
 }
 
 .mealDiv {
@@ -171,17 +177,77 @@ body{
 /* Recipe parts*/
 
 .recipe {
-	margin: auto;
-	position: relative;
-	background: rgba(0, 0, 0, 0.5);
-	color: #f1f1f1;
-	max-width: 70%;
+	max-width: 90%;
 	min-width: 500px;
-	height: 520px;
+	height: 1500px;
+	margin: auto;
+	text-align: center;
+	background: rgba(110,30,41,0.5);
 	border: 2px solid white;
+	color: #f1f1f1;
+	position: relative;
+	border-radius:5px;
 }
 
+.recipe img{
+	max-width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border: 2px solid black;
+	border-radius:5px;
+}
 
+.recipeDesc{
+	max-width: 70%;
+	min-width: 450px;
+	margin: auto;
+	text-align: center;
+	background: rgba(110,30,41,1);
+	border: 2px solid black;
+	border-radius:5px;
+}
+
+.ingredients{
+	max-width: 70%;
+	min-width: 450px;
+	margin: auto;
+	text-align: center;
+	background: rgba(110,30,41,1);
+	border: 2px solid black;
+	border-radius:5px;
+}
+
+.preparation{
+	max-width: 70%;
+	min-width: 450px;
+	margin: auto;
+	text-align: center;
+	background: rgba(110,30,41,1);
+	border: 2px solid black;
+	border-radius:5px;
+}
+
+.links{
+	max-width: 200px;
+	text-align:center;
+	background-color: rgba(110,30,41,0.3);
+	border: 2px solid black;
+	padding: 20px 15px;
+	display: inline;
+	border-radius:5px;
+	margin: 3px;
+}
+
+.links a {
+	color: white;
+	text-decoration: none;
+}
+
+.links:hover{
+	background-color: rgba(110,30,41,0.7);
+	border: 2px solid white;
+}
 
 /***********************************/
 /* Footer  */
@@ -194,6 +260,7 @@ body{
 	position:fixed;
 	text-align: center;
 	padding: 15px 10px;
+	border-radius:5px;
 }
 
 .footer a{
