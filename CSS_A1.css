@@ -97,7 +97,7 @@ body{
 .Info {
 	max-width: 50%;
 	min-height: 225px;
-	max-height: 350px;
+	max-height: 40%;
 	margin: auto;
 	text-align:center;
 	padding: 10px;
@@ -112,7 +112,7 @@ body{
 .buttonsLink{
 	max-width: 80%;
 	min-width: 600px;
-	max-height: 300px;
+	max-height: 40%;
 	min-height: 250px;
 	margin: auto;
 	text-align:center;
@@ -190,7 +190,7 @@ body{
 }
 
 .recipe img{
-	max-width: 55%;
+	max-height: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
