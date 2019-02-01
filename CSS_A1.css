@@ -96,7 +96,6 @@ body{
 /* Welcome box Main */
 .Info {
 	max-width: 50%;
-	min-height: 225px;
 	max-height: 40%;
 	margin: auto;
 	text-align:center;
@@ -190,7 +189,7 @@ body{
 }
 
 .recipe img{
-	max-height: 50%;
+	max-height: 45%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
