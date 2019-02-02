@@ -115,6 +115,10 @@ body{
   font-style: italic;
 }
 
+.Info p{
+  font-size: 18px;
+}
+
 
 /* Picture buttons Main */
 .buttonsLink{
@@ -177,9 +181,6 @@ body{
 	-ms-transform: translate(-50%, -50%);
 }
 
-
-
-
 /*******************************/
 
 /* Recipe parts*/
@@ -188,6 +189,7 @@ body{
 	max-width: 90%;
 	min-width: 500px;
 	min-height: 1500px;
+  max-height: 2500px;
 	margin: auto;
 	text-align: center;
 	background: rgba(110,30,41,0.5);
@@ -202,15 +204,17 @@ body{
 }
 
 .recipe img{
-	/*max-width: 80%;*/
-	/*max-height: 5%;*/
   max-width: 33%;
 	border: 2px solid black;
 	border-radius:5px;
 }
 
+.picMod{
+  width: 27%;
+}
+
 .recipeDesc{
-	max-width: 70%;
+	max-width: 75%;
 	min-width: 450px;
 	margin: auto;
 	text-align: center;
@@ -234,7 +238,7 @@ body{
 }
 
 .preparation{
-	max-width: 70%;
+	max-width: 75%;
 	min-width: 450px;
 	margin: auto;
 	text-align: justify;
@@ -271,36 +275,31 @@ body{
 /********************************/
 
 /* Nutrition facts */
-.nutritionTable{
-	max-width: 90%;
-	height: 500px;
-	margin: auto;
-	text-align: center;
-	/*background: rgba(110,30,41,0.5);*/
-	border: 2px solid white;
-	color: #f1f1f1;
-	position: relative;
-	border-radius:5px;
-}
+
 
 .tablefacts{
 	position: relative;
 	text-align: center;
 	display: flex;
 	justify-content: center;
+  max-width: 90%;
+  margin: auto;
+  border-radius:5px;
 }
 
-.extrabox{
-	background: rgba(110,30,41,0);
-}
-
-table, th, td {
-	border: 1px solid black;
+th, td {
+	border: 2px solid black;
+  color: white;
+  padding: 15px;
+  border-radius:5px;
 }
 
 table{
-	background-color: white;
 	align-self: center;
+  border: 2px solid white;
+  color: : white;
+  width: 100;
+  border-radius:5px;
 }
 
 th {
@@ -309,12 +308,67 @@ th {
 }
 
 td{
-	background-color:rgba(110,30,41,0.5);
+	background-color:rgba(110,30,41,0.2);
 	padding: 5px 15px;
 }
 
+tr:nth-child(even) {
+  background-color: rgba(110,30,41,0.5);
+}
+
+td:hover{
+  background-color:rgba(110,30,41,0.9);
+  border: 3px solid white;
+}
+
+/* nutrition picture link */
+
+.tablePic {
+  position: relative;
+  width: 15%;
+  text-align:center;
+  border: 2px solid white;
+  border-radius:5px;
+  display: flex;
+  margin:0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(110,30,41,1);
+  color: white;
+  text-align: center;
+}
+
+.image2 {
+	width: 100%;
+	height: auto;
+	opacity: 1;
+}
 
 
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.tablePic:hover .overlay {
+  opacity: 1;
+}
 
 /***********************************/
 /* Footer  */
