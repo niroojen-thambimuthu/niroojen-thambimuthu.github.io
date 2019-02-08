@@ -6,43 +6,44 @@
 		<meta name="author" content="Niroojen Thambimuthu">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="A2_CSS.css" rel="stylesheet">
+		<script src="A2_JS.js"></script>
 	</head>
 	<body>
 		<div class="calculator">
-			<div class="firstDisplay">0</div>
+			<div class="firstDisplay" id="demo">0</div>
 			<div class="secondDisplay">0</div>
 			
 			<br>
 			
 			<div class="row">
-				<button>(</button>
-				<button>)</button>
-				<button>C</button>
-				<button>CE</button>
+				<button onclick="getExpression('lBracket')" id="lBracket" value="(" >(</button>
+				<button onclick="getExpression('rBracket')" id="rBracket" value=")" >)</button>
+				<button onclick="clearAll()">C</button>
+				<button onclick="backspace()">CE</button>
 			</div>
 			<div class="row">
-				<button>7</button>
-				<button>8</button>
-				<button>9</button>
-				<button>/</button>
+				<button onclick="getExpression('seven')" id="seven" value="7" >7</button>
+				<button onclick="getExpression('eight')" id="eight" value="8" >8</button>
+				<button onclick="getExpression('nine')" id="nine" value="9" >9</button>
+				<button onclick="getExpression('division')" id="division" value="/" >/</button>
 			</div>
 			<div class="row">
-				<button>4</button>
-				<button>5</button>
-				<button>6</button>
-				<button>x</button>
+				<button onclick="getExpression('four')" id="four" value="4" >4</button>
+				<button onclick="getExpression('five')" id="five" value="5" >5</button>
+				<button onclick="getExpression('six')" id="six" value="6" >6</button>
+				<button onclick="getExpression('multiply')" id="multiply" value="*" >X</button>
 			</div>
 			<div class="row">
-				<button>1</button>
-				<button>2</button>
-				<button>3</button>
-				<button>-</button>
+				<button onclick="getExpression('one')" id="one" value="1" >1</button>
+				<button onclick="getExpression('two')" id="two" value="2" >2</button>
+				<button onclick="getExpression('three')" id="three" value="3" >3</button>
+				<button onclick="getExpression('minus')" id="minus" value="-" >-</button>
 			</div>
 			<div class="row">
-				<button>0</button>
-				<button>.</button>
-				<button>=</button>
-				<button>+</button>
+				<button onclick="getExpression('zero')" id="zero" value="0" >0</button>
+				<button onclick="getExpression('decimalP')" id="decimalP" value="." >.</button>
+				<button onclick="compute()">=</button>
+				<button onclick="getExpression('plus')" id="plus" value="+" >+</button>
 			</div>
 		</div>
   </div>
