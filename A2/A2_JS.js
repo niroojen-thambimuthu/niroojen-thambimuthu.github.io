@@ -1,3 +1,13 @@
+/*
+*	Niroojen Thambimuthu 10153928
+*	Seng513 A2 - JavaScript file
+*	Feb 15, 2018
+*	
+*	A2_JS.js
+*/
+
+
+// Variables declaration
 var x = "";
 var total = "";
 var ansTemp = "";
@@ -7,7 +17,6 @@ var ans = false;
 var operations = ["/", "*", "+", "-"];
 
 
-
 /*
 *	Function when user clicks numbers and operands button
 */
@@ -15,35 +24,35 @@ function getExpression(btn){
 	var temp = document.getElementById(btn).value;
 	var ops = operations.includes(temp);
 	
-	/* Error reset */
+	// Error reset
 	if (error === true){
 		clearAll();
 		error = false;
 	}
 	
-	/* Previously computed value exist*/
+	// Previously computed value exist
 	if (loop === true && x !== ""){
-		/* If an operand, reuse previous value */
+		// Clicked button is an operand, reuse previous value
 		if (ops === true){
 			x = x + temp;
 			ansTemp = "Ans" + temp;
 			document.getElementById("expression").innerHTML = "Ans: " + total;
 			ans = true;
 		}
-		/* Else reset and replace computed value */
+		// Else reset and replace computed value
 		else{
 			clearAll();
 			x = temp;
 		}
 		loop = false;
 	}
-	/* No previously computed value  */
+	// No previously computed value
 	else{
-		/* When user enters operands before numbers */
+		// When user enters operands before numbers
 		if (x === "" && (ops === true)){
 			x = 0 + temp;
 		}
-		/* Store user click inputs into string*/
+		// Store user click inputs into string
 		else{
 			if (ans === true){
 				ansTemp = ansTemp + temp;
@@ -51,6 +60,7 @@ function getExpression(btn){
 			x = x + temp;
 		}
 	}
+	// call function for Print button click output
 	output();
 }
 
@@ -59,22 +69,23 @@ function getExpression(btn){
 *	Function to compute and output equation 
 */
 function compute(){
-	/* If computation is valid */
+	// If computation is valid
 	try{
-		/* When user computes nothing */
+		// When user computes nothing
 		if (x === ""){
 			total = eval("0");
 		}
-		/* Computes expression string */
+		// Computes expression string
 		else{
 			total = eval(x);
 		}
-		document.getElementById("calcBox").innerHTML = "Ans: " + total;
+		// Output final answer, float up to 5 decimal point and trailing zeros are removed
+		document.getElementById("calcBox").innerHTML = "Ans: " + total.toFixed(5).replace(/0+$/, "");
 		document.getElementById("expression").innerHTML = x;
 		x = total;
 		loop = true;
 	}
-	/* Error catching for invalid computation */
+	// Error catching for invalid computation
 	catch(err){
 		document.getElementById("expression").innerHTML = x;
 		document.getElementById("calcBox").innerHTML = "Error!!!";
@@ -98,14 +109,15 @@ function clearAll(){
 
 
 /*
-*	Function to print input output
+*	Function button click output
 */
 function output(){
-	/* Output to calculator */
-	if(ans === true){ /* Is previously computed */
+	// If previously computed
+	if(ans === true){
 		document.getElementById("calcBox").innerHTML = ansTemp;
 
 	}
+	// new user input 
 	else{
 		document.getElementById("calcBox").innerHTML = x;
 	}
@@ -116,6 +128,7 @@ function output(){
 *	Function to backspace
 */
 function backspace(){
+	// For previously computed expression
 	if(ans === true){ 
 		if (ansTemp.length > 3){
 			ansTemp = ansTemp.substring(0, ansTemp.length-1);
@@ -124,10 +137,12 @@ function backspace(){
 			x = x.substring(0, x.length-1);
 		}
 	}
+	// For new user expression
 	else{
 		if (x.length > 0){
 			x = x.substring(0, x.length-1);
 		}
 	}
+	// cal function for Print button click output
 	output();
 }

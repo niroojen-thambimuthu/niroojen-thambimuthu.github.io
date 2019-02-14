@@ -1,3 +1,11 @@
+/*
+*	Niroojen Thambimuthu 10153928
+*	Seng513 A2 - CSS file
+*	Feb 15, 2018
+*	
+*	A2_CSS.css
+*/
+
 * {
 	box-sizing: border-box;
 }
@@ -16,6 +24,7 @@ body { margin:0; }
   .calculator {
     background-color: lightblue;
 	width: 100%;
+	min-width: 180px;
 	border: 1px solid black;
 	margin: 0 auto;
   }
