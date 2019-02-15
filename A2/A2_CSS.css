@@ -6,12 +6,20 @@
 *	A2_CSS.css
 */
 
-* {
+*{
 	box-sizing: border-box;
 }
 
-body { margin:0; }
+body{
+	margin:0;
+}
 
+/*******************************/
+
+/* Expression display*/
+
+
+/* Desktop mode */
 .calculator {
 	width: 600px;
 	margin: 0 auto;
@@ -20,59 +28,68 @@ body { margin:0; }
 	background-color: black;
 }
 
+/* Mobile mode when under 600px, or up to 599px */
 @media only screen and (max-width: 599px) {
-	body { margin:0; }
-	
-  .calculator {
-	width: 100%;
-	min-width: 200px;
-	border: 1px solid black;
-	margin: 0 auto;
-	border-radius: 12px;
-	background-color: black;
-	
-  }
+	.calculator {
+		width: 100%;
+		min-width: 200px;
+		border: 1px solid red;
+		margin: 0 auto;
+		border-radius: 12px;
+		background-color: black;
+	}
 }
+
+/*******************************/
+
+/* Expression display*/
 
 .firstDisplay {
 	text-align: right;
 	color: white;
 	font-size: 30px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right:10px;
-	height: 10vh;
+	padding:10px;
+	min-height: 5vh;
 	border-bottom: 2px dotted white;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 
+/* Input and final answer display */
 .secondDisplay {
-	width: 90%;
-	height: 10vh;
+	max-width: 90%;
+	min-height: 5vh;
 	margin: 0 auto;
 	font-size: 30px;
 	text-align: right;
 	padding-right:10px;
+	padding-top: 10px;
 	color: white;
-	overflow-x: hidden;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 
+/* Button layout and colors */
 .row {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display:inline-block;
-  font-size: 0;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	display:inline-block;
+	font-size: 0;
 }
 
 button {
-  width: 25%;
-  text-align: center;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid black;
-  font-size: 28px;
-  outline:none;
-  background-color: #eee;
+	width: 25%;
+	text-align: center;
+	padding: 20px;
+	border: 1px solid black;
+	font-size: 28px;
+	outline:none;
+	background-color: rgba(244,244,244,1);
+}
+
+button:hover{
+	background-color: rgba(244,244,244,0.9);
 }
 
 .bottomRIGHT{
@@ -85,4 +102,14 @@ button {
 
 .topBORDER{
 	border-top: 2px solid black;
+}
+
+.Operation{
+	background-color: rgba(255,150,0,1);
+	color: white;
+	font-style: bold;
+}
+
+.Operation:hover{
+	background-color: rgba(255,150,0,0.9);
 }

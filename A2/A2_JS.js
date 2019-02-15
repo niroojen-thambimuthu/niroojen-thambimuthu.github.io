@@ -36,7 +36,7 @@ function getExpression(btn){
 		if (ops === true){
 			x = x + temp;
 			ansTemp = "Ans" + temp;
-			document.getElementById("expression").innerHTML = "Ans: " + total;
+			document.getElementById("expression").innerHTML = "Ans:" + total;
 			ans = true;
 		}
 		// Else reset and replace computed value
@@ -80,7 +80,7 @@ function compute(){
 			total = eval(x);
 		}
 		// Output final answer, float up to 5 decimal point and trailing zeros are removed
-		document.getElementById("calcBox").innerHTML = "Ans: " + total.toFixed(5).replace(/0+$/, "");
+		document.getElementById("calcBox").innerHTML = "Ans:" + total.toFixed(2);
 		document.getElementById("expression").innerHTML = x;
 		x = total;
 		loop = true;
