@@ -16,50 +16,73 @@ body { margin:0; }
 	width: 600px;
 	margin: 0 auto;
 	border: 1px solid black;
+	border-radius: 12px;
+	background-color: black;
 }
 
 @media only screen and (max-width: 599px) {
 	body { margin:0; }
 	
   .calculator {
-    background-color: lightblue;
 	width: 100%;
-	min-width: 180px;
+	min-width: 200px;
 	border: 1px solid black;
 	margin: 0 auto;
+	border-radius: 12px;
+	background-color: black;
+	
   }
 }
 
 .firstDisplay {
 	text-align: right;
-	font-size: 21px;
+	color: white;
+	font-size: 30px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-right:10px;
 	height: 10vh;
+	border-bottom: 2px dotted white;
 }
 
 .secondDisplay {
 	width: 90%;
 	height: 10vh;
 	margin: 0 auto;
-	font-size: 25px;
+	font-size: 30px;
 	text-align: right;
 	padding-right:10px;
-	border: 1px solid black;
+	color: white;
+	overflow-x: hidden;
 }
 
 .row {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 10px;
+  text-align: center;
+  display:inline-block;
+  font-size: 0;
 }
 
 button {
-  width: 23%;
+  width: 25%;
   text-align: center;
-  /*padding: 20px;*/
+  padding: 20px;
   background-color: white;
-  border-radius:5px;
   border: 1px solid black;
+  font-size: 28px;
+  outline:none;
+  background-color: #eee;
+}
+
+.bottomRIGHT{
+	border-bottom-right-radius: 10px;
+}
+
+.bottomLEFT{
+	border-bottom-left-radius: 10px;
+}
+
+.topBORDER{
+	border-top: 2px solid black;
 }

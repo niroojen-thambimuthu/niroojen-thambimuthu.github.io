@@ -16,10 +16,10 @@
 			<br>
 			
 			<div class="row">
-				<button onclick="getExpression('lBracket')" id="lBracket" value="(" >(</button>
-				<button onclick="getExpression('rBracket')" id="rBracket" value=")" >)</button>
-				<button onclick="clearAll()">C</button>
-				<button onclick="backspace()">CE</button>
+				<button onclick="getExpression('lBracket')" id="lBracket" value="(" class="topBORDER" >(</button>
+				<button onclick="getExpression('rBracket')" id="rBracket" value=")" class="topBORDER" >)</button>
+				<button onclick="clearAll()" class="topBORDER">C</button>
+				<button onclick="backspace()" class="topBORDER">CE</button>
 			</div>
 			<div class="row">
 				<button onclick="getExpression('seven')" id="seven" value="7" >7</button>
@@ -40,12 +40,11 @@
 				<button onclick="getExpression('minus')" id="minus" value="-" >-</button>
 			</div>
 			<div class="row">
-				<button onclick="getExpression('zero')" id="zero" value="0" >0</button>
+				<button onclick="getExpression('zero')" id="zero" value="0" class="bottomLEFT" >0</button>
 				<button onclick="getExpression('decimalP')" id="decimalP" value="." >.</button>
 				<button onclick="compute()">=</button>
-				<button onclick="getExpression('plus')" id="plus" value="+" >+</button>
+				<button onclick="getExpression('plus')" id="plus" value="+" class="bottomRIGHT">+</button>
 			</div>
 		</div>
-  </div>
 	</body>
 </html>
