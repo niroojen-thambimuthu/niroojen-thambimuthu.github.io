@@ -49,7 +49,7 @@ function getExpression(btn){
 	// No previously computed value
 	else{
 		// When user enters operands before numbers
-		if (x === "" && (ops === true)){
+		if (x === "" && ((ops === true) || ( temp === "."))){
 			x = 0 + temp;
 		}
 		// Store user click inputs into string
