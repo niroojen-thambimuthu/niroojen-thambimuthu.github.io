@@ -1,7 +1,7 @@
 /*
 *	Niroojen Thambimuthu 10153928
 *	Seng513 A2 - JavaScript file
-*	Feb 15, 2018
+*	Feb 15, 2019
 *	
 *	A2_JS.js
 */
